@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:#resources#XHTML#Front#Front.xhtml"
+  PATH="/resources/XHTML/Front/Front.xhtml" SHAPE="32,17,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#resources#XHTML#Front#Front.xhtml:0"
+   NAME="item" PATH="/resources/XHTML/Front/Front.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="gotoAdmin::#resources#XHTML#Admin#PanelAdmin.xhtml"
+    NAME="output" PATH="/resources/XHTML/Admin/PanelAdmin.xhtml"
+    TARGET="rules:#resources#XHTML#Admin#PanelAdmin.xhtml"
+    TITLE="gotoAdmin" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="gotoAyuntamiento::#resources#XHTML#Ayuntamiento#PanelAyuntamiento.xhtml"
+    NAME="output1"
+    PATH="/resources/XHTML/Ayuntamiento/PanelAyuntamiento.xhtml"
+    TARGET="rules:#resources#XHTML#Ayuntamiento#PanelAyuntamiento.xhtml"
+    TITLE="gotoAyuntamiento" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#resources#XHTML#Admin#PanelAdmin.xhtml"
+  PATH="/resources/XHTML/Admin/PanelAdmin.xhtml" SHAPE="240,33,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM
+  NAME="rules:#resources#XHTML#Ayuntamiento#PanelAyuntamiento.xhtml"
+  PATH="/resources/XHTML/Ayuntamiento/PanelAyuntamiento.xhtml"
+  SHAPE="256,177,0,0" model-entity="JSFProcessGroup"/>
+</PROCESS>

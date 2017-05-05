@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui" xmlns:b="http://bootsfaces.net/ui">
+
+<h:head>
+	<title>FIBWI Actualidad</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<h:outputStylesheet library="customthemes" name="bootstrap.min.css" />
+	<h:outputStylesheet library="customthemes" name="Freelancer.css" />
+	<h:outputStylesheet name="CSS/Front/estilos.css" />
+	<h:outputScript library="js" name="calendar_es.js"></h:outputScript>
+
+
+</h:head>
+<body style="margin-left: 7%; margin-right: 10%">
+
+	<b:navBar brandHref="fibwiradio.com"
+		brand-img="resources/iconos/icono.png" inverse="true"
+		style="position:fixed;z-index:3;height:20%;border-radius:0px; background:linear-gradient(to top,#FFFFFF 80%, #00aae3 20%);border-style:hidden;top:0px;box-shadow: 0 5px 5px rgba(182, 182, 182, 0.75);">
+		<b:navbarLinks>
+			<b:navLink style="top:50px;font-color:black" value="
+		Home"
+				href="../../XHTML/Front/Front.xhtml">
+			</b:navLink>
+			<b:navLink style="top:50px;font-color:black" value="Admin"
+				href="../../XHTML/Admin/PanelAdmin.xhtml"></b:navLink>
+			<b:navLink style="top:50px;font-color:black" value="Ayto"
+				href="../../XHTML/Ayuntamiento/PanelAyuntamiento.xhtml"></b:navLink>
+		</b:navbarLinks>
+	</b:navBar>
+
+	<b:row
+		style="display:flex;flex-direction:column;float:right;width:25%;position:absolute;top:41%;right:8%">
+		<b:column>
+			<b:thumbnail>
+				<img src="resources/media/noticia1.jpg"
+					alt="Generic placeholder thumbnail" />
+			</b:thumbnail>
+		</b:column>
+		<b:column>
+			<b:thumbnail>
+				<img src="resources/media/noticia1.jpg"
+					alt="Generic placeholder thumbnail" />
+			</b:thumbnail>
+		</b:column>
+		<b:column>
+			<b:thumbnail>
+				<img src="resources/media/noticia1.jpg"
+					alt="Generic placeholder thumbnail" />
+			</b:thumbnail>
+		</b:column>
+	</b:row>
+
+	<b:carousel id="tiovivo" style="width:800px;height:448px;top:250px"
+		interval="10000;">
+		<b:carouselItem>
+			<img src="resources/media/imagen1.jpg" alt=""
+				style="width: 800px; height: 448px;" />
+			<b:carouselCaption>
+				<h3>You'll love Valladolid!</h3>
+
+			</b:carouselCaption>
+		</b:carouselItem>
+		<b:carouselItem caption="Valladolid has a nice central park.">
+			<img src="resources/media/imagen2.jpg" alt="Valladolid"
+				style="width: 800px; height: 448px" />
+		</b:carouselItem>
+		<b:carouselItem caption="Ain't he a beauty?">
+			<img src="resources/media/imagen3.jpg" alt="Valladolid"
+				style="width: 800px; height: 448px" />
+		</b:carouselItem>
+		<b:carouselItem>
+			<img src="resources/media/imagen4.jpg" alt="Valladolid"
+				style="width: 800px; height: 448px" />
+			<b:carouselCaption>
+				<h3>Fountains</h3>
+				<p>In Spain, dry as it is, people love to play with water.</p>
+			</b:carouselCaption>
+		</b:carouselItem>
+		<b:carouselItem caption="Valladolid - a city with a lot of history">
+			<img src="resources/media/imagen5.jpg" alt="Valladolid"
+				style="width: 800px; height: 449px" />
+		</b:carouselItem>
+	</b:carousel>
+
+
+	<b:row
+		style="display:flex; flex-direction: column; margin-top:350px;width:800px;z-index:1">
+		<b:column col-sm="6" col-md="4" style="width:800px;">
+			<b:thumbnail style="width:800px;">
+				<img src="resources/media/noticia1.jpg"
+					alt="Generic placeholder thumbnail" />
+				<f:facet name="caption">
+					<h3>Thumbnail label</h3>
+					<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+						Donec id elit non mi porta gravida at eget metus. Nullam id dolor
+						id nibh ultricies vehicula ut id elit.</p>
+					<p>
+						<b:button look="primary" value="Leer más" />
+
+					</p>
+				</f:facet>
+			</b:thumbnail>
+		</b:column>
+		<b:column col-sm="6" col-md="4" style="width:800px;">
+			<b:thumbnail style="width:800px;">
+				<img src="resources/media/noticia2.jpg"
+					alt="Generic placeholder thumbnail" />
+				<f:facet name="caption">
+					<h3>Thumbnail label</h3>
+					<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+						Donec id elit non mi porta gravida at eget metus. Nullam id dolor
+						id nibh ultricies vehicula ut id elit.</p>
+					<p>
+						<b:button look="primary" value="Leer más" />
+
+					</p>
+				</f:facet>
+			</b:thumbnail>
+		</b:column>
+
+		<b:column col-sm="6" col-md="4" style="width:800px;">
+			<b:thumbnail style="width:800px;">
+				<img src="resources/media/noticia1.jpg"
+					alt="Generic placeholder thumbnail" />
+				<f:facet name="caption">
+					<h3>Thumbnail label</h3>
+					<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+						Donec id elit non mi porta gravida at eget metus. Nullam id dolor
+						id nibh ultricies vehicula ut id elit.</p>
+					<p>
+						<b:button look="primary" value="Leer más" />
+
+					</p>
+				</f:facet>
+			</b:thumbnail>
+		</b:column>
+		<b:column col-sm="6" col-md="4" style="width:800px;">
+			<b:thumbnail style="width:800px;">
+				<img src="resources/media/noticia2.jpg"
+					alt="Generic placeholder thumbnail" />
+				<f:facet name="caption">
+					<h3>Thumbnail label</h3>
+					<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+						Donec id elit non mi porta gravida at eget metus. Nullam id dolor
+						id nibh ultricies vehicula ut id elit.</p>
+					<p>
+						<b:button look="primary" value="Leer más" />
+
+					</p>
+				</f:facet>
+			</b:thumbnail>
+		</b:column>
+	</b:row>
+
+
+
+
+	<b:navBar brandHref="fibwiradio.com" inverse="true"
+		style="height:30%;background-color:#00aae3;border-radius:0px;border:none;position:relative; float:bottom;">
+
+	</b:navBar>
+</body>
+
+</html>

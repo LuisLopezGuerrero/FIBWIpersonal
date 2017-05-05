@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" >
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui" xmlns:b="http://bootsfaces.net/ui">
+
+<h:head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<h:outputStylesheet library="customthemes" name="bootstrap.min.css" />
+	<h:outputStylesheet library="customthemes" name="Freelancer.css" />
+	<h:outputStylesheet name="CSS/Front/estilos.css" />
+	<h:outputScript library="js" name="calendar_es.js"></h:outputScript>
+	<h:outputStylesheet library="CSS/Ayuntamiento" name="estilos.css"></h:outputStylesheet>
+
+
+</h:head>
+<body>
+	<div>
+		<b:navBar brand="FIBWI" brandHref="fibwiradio.com" inverse="true" id="navbar">
+			<b:navbarLinks>
+				<b:navLink value="Home" href="../../XHTML/Front/Front.xhtml"></b:navLink>
+				<b:navLink value="Admin" href="../../XHTML/Admin/PanelAdmin.xhtml"></b:navLink>
+				<b:navLink value="Ayto" href="../../XHTML/Ayuntamiento/PanelAyuntamiento.xhtml"></b:navLink>
+			</b:navbarLinks>
+			<p:sticky target="navbar" />
+		</b:navBar>
+	</div>
+
+	<b:form style="margin-left:1cm;">
+		<b:row>
+			<b:inputText  span="5" value="#{focusView.username}" required="true" label="Titulo">
+			<f:validateLength maximum="10" />
+			
+			</b:inputText>
+			<b:inputText  span="3" value="#{focusView.email}" required="true" label="Autor">
+			<f:validateLength maximum="5" />
+			</b:inputText>
+		</b:row>
+		<b:row>
+			<h:form>
+				<h3 style="margin-top: 0">Texto</h3>
+				<p:textEditor widgetVar="editor1" value="#{EditorView.text}" 
+					width="400" height="300" style="margin-bottom:10px">
+					<f:validateLength maximum="400" />
+					</p:textEditor>
+				<p:commandButton value="Clear" type="button"
+					onclick="PF('editor1').clear();" icon="ui-icon-close" />
+				<p:dialog header="Content" widgetVar="dlg" showEffect="fade"
+					hideEffect="fade">
+				</p:dialog>
+			</h:form>
+
+			<br />
+			<br />
+			<b:form>
+				<b:inputText tags="true" value="#{TagsBean.tags}"
+					placeholder="Hit enter to create tag" label="Tags" />
+			</b:form>
+
+		</b:row>
+	</b:form>
+	<br />
+	<h:form>
+		<p:fileUpload fileUploadListener="#{FileUploadView.handleFileUpload}"
+			mode="advanced" dragDropSupport="false" update="messages"
+			sizeLimit="100000" fileLimit="3"
+			allowTypes="/(\.|\/)(gif|jpe?g|png)$/" />
+
+		<p:growl id="messages" showDetail="true" />
+	</h:form>
+	<br />
+	<h:form>           
+    <p:growl id="message" showDetail="true" />
+ 
+    <p:commandButton value="Submit" actionListener="#{dialogView.destroyWorld}" update="message">
+        <p:confirm header="Confirmation" message="Are you sure?" icon="ui-icon-alert" />
+    </p:commandButton>
+ 
+    <p:confirmDialog global="true" showEffect="fade" hideEffect="fade">
+        <p:commandButton value="Yes" type="button" styleClass="ui-confirmdialog-yes" icon="ui-icon-check" />
+        <p:commandButton value="No" type="button" styleClass="ui-confirmdialog-no" icon="ui-icon-close" />
+    </p:confirmDialog>
+</h:form>
+</body>
+</html>

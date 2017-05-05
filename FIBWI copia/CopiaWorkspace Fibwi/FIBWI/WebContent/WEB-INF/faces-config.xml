@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+ <managed-bean>
+  <managed-bean-name>manageUsuarios</managed-bean-name>
+  <managed-bean-class>managebeans.ManageUsuarios</managed-bean-class>
+  <managed-bean-scope>request</managed-bean-scope>
+ </managed-bean>
+ <managed-bean>
+  <managed-bean-name>redirecciones</managed-bean-name>
+  <managed-bean-class>managebeans.Redirecciones</managed-bean-class>
+  <managed-bean-scope>request</managed-bean-scope>
+ </managed-bean>
+ <managed-bean>
+  <managed-bean-name>imagesView</managed-bean-name>
+  <managed-bean-class>managebeans.ImagesView</managed-bean-class>
+  <managed-bean-scope>session</managed-bean-scope>
+ </managed-bean>
+ <managed-bean>
+  <managed-bean-name>fileUploadView</managed-bean-name>
+  <managed-bean-class>managebeans.FileUploadView</managed-bean-class>
+  <managed-bean-scope>request</managed-bean-scope>
+ </managed-bean>
+ <managed-bean>
+  <managed-bean-name>buttonView</managed-bean-name>
+  <managed-bean-class>managebeans.ButtonView</managed-bean-class>
+  <managed-bean-scope>request</managed-bean-scope>
+ </managed-bean>
+ <managed-bean>
+  <managed-bean-name>tagsBean</managed-bean-name>
+  <managed-bean-class>managebeans.TagsBean</managed-bean-class>
+  <managed-bean-scope>request</managed-bean-scope>
+ </managed-bean>
+ <managed-bean>
+  <managed-bean-name>editorView</managed-bean-name>
+  <managed-bean-class>managebeans.EditorView</managed-bean-class>
+  <managed-bean-scope>request</managed-bean-scope>
+ </managed-bean>
+ <navigation-rule>
+  <display-name>Front</display-name>
+  <from-view-id>/resources/XHTML/Front/Front.xhtml</from-view-id>
+  <navigation-case>
+   <from-outcome>gotoAdmin</from-outcome>
+   <to-view-id>/resources/XHTML/Admin/PanelAdmin.xhtml</to-view-id>
+  </navigation-case>
+  <navigation-case>
+   <from-outcome>gotoAyuntamiento</from-outcome>
+   <to-view-id>/resources/XHTML/Ayuntamiento/PanelAyuntamiento.xhtml</to-view-id>
+  </navigation-case>
+ </navigation-rule>
+ <application/>
+ <lifecycle>
+  <phase-listener>managebeans.FocusView</phase-listener>
+  <phase-listener>managebeans.ResetInputView</phase-listener>
+  <phase-listener>managebeans.DialogView</phase-listener>
+ </lifecycle>
+</faces-config>
